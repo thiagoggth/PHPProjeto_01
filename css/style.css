@@ -1,0 +1,306 @@
+/*resetando a formatação padrao do navegador*/
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+/*classes auxiliares*/
+.container{
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 0 2%;	
+}
+
+.clear{
+	clear: both;
+}
+/*Index*/
+
+/*Estilo header*/
+
+header .topo{
+    background-color: #332DB0;
+    border-bottom: 1px solid white;
+}
+
+.logo{
+    margin: 20px 0;
+    width: 300px;
+    height: 38px;
+    font-size: 30px;
+    float: left;
+    color: white;
+}
+
+.menu-desktop{
+    float: right;   
+}
+
+.menu-desktop ul{
+    margin-top: 35px;
+    list-style-type: none;
+}
+
+.menu-desktop ul li{
+    text-transform: uppercase;
+    padding: 0 30px;
+    display: inline-block;    
+}
+
+.menu-desktop li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+/*menu mobile*/
+.menu-mobile{
+    display: none;
+    float: right;
+}
+.menu-mobile span{
+    position: absolute;
+    top: 18px;
+    right: 2%;
+    color: white;
+    font-size: 32px;
+}
+
+.menu-mobile ul{    
+    display: none;
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    top: 78px;
+    left: 0;
+}
+
+.menu-mobile ul li{
+    list-style-type: none;
+    text-transform: uppercase;
+    padding: 30px 0;
+    text-align: center;
+    background: #e7ebff;
+    border-bottom: 1px solid #3346B7;
+}
+
+.menu-mobile li a{
+    color: #10173E;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+}
+
+/*Fim do estilo header*/
+
+/*Estilo section.banner*/
+section.banner{
+    padding: 30px 0;
+    text-align: center;    
+    min-height: 700px;
+    position: relative;
+    background-image: url("../imagens/women-1209678_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 700px; 
+    background: #1c1c1c;
+    opacity: 0.7;
+}
+.banner .container{
+    width: 100%;
+    max-width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner h2{
+    font-weight: normal;
+    color: white;
+    font-size: 32px;
+}
+
+.banner input[type=email],
+.banner input[type=submit]{
+    height: 55px;
+    max-width: 550px;
+    font-size: 18px;
+    width: 100%;    
+    margin: 10px 0;
+    border-radius: 4px;
+    padding-left: 8px;
+    border: none;
+    outline: none;
+    border: 1px solid white;
+}
+
+.banner input[type=email]:focus{
+    border: 1px solid #3346B7;
+    
+}
+
+.banner input[type=submit]{
+    cursor: pointer;
+    padding: 0;
+    color: white;
+    background: #4062BD;
+    font-size: 18px;
+    border: none;
+    
+}
+/*Fim estilo section.banner*/
+
+/*Estilo section.diferenciais*/
+section.diferenciais{
+    padding: 30px 0;
+}
+
+.card-single{
+    margin-bottom: 10px;
+    min-height: 500px;
+}
+.card-img-top{
+    color: #332DB0;
+    font-size: 100px;
+    text-align: center;
+}
+
+.card-title{
+    color:#006be3;
+}
+
+.card-text{
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.card-single .btn-primary{
+    position: absolute;
+    bottom: 10px;
+}
+
+
+/*Fim estilo section diferenciais*/
+
+/*estilo footer*/
+footer{
+    text-align: center;
+    font-size: 18px;
+    padding: 30px 0;
+    color: white;
+    background: #4062BD;
+    
+}
+
+
+footer.fixed{
+    width: 100%;
+    position: absolute;
+    top: 115%;
+    transform: translate(0,-115%);
+    
+    
+}
+/*Fim estilo footer*/
+
+/*-----------------------------*/
+
+/*Estilo pagina de erro*/
+h1.erro-404{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+
+/*-----------------------------*/
+
+/*Estilo da pagina contato*/
+.bg-title{
+    background-image: url("../imagens/bg-form.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100px;    
+    position: relative;
+}
+
+.bg-title h2{
+    color: white;
+    font-size: 38px;
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.line{
+    width: 80px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 70%;
+    margin-left: 10px;
+}
+
+section.contato{
+    padding: 30px 0;
+}
+
+.contato .container{
+    max-width: 900px;
+}
+
+.contato h2{
+    text-align: center;
+    color: #332DB0;
+    font-weight: normal;
+    position: relative;
+}
+
+.contato span{
+    font-size:18px;
+}
+
+.container .btn-primary{
+    float: right;
+}
+
+.contato .form-control{
+    margin-bottom: 15px;
+}
+
+.contato textarea.form-control{
+    resize: none;
+    min-height: 200px;
+}
+
+
+
+/*-----------------------------*/
+
+
+/*Configuração responsivo*/
+
+@media screen and (max-width: 768px){
+    .menu-desktop{
+        display: none;
+    }
+    .menu-mobile{
+        display: block;
+    }
+    
+   
+}
