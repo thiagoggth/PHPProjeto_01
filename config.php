@@ -1,14 +1,10 @@
 <?php
-
+include("vendor/Email.php");
 define ('INCLUDE_PATH','http://localhost/cursos/curso%20php/php%20jedai/projeto_01/novo/');
 
-function autoload($class){
-    
-    if($class = "Email")
-        include("vendor/$class.php");
-}
 
-/**
+
+/*
 função para trocar de pagina dinamicamente.
 --------
 velidação da url, caso no diretario principal,

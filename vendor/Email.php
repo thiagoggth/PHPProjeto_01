@@ -5,7 +5,7 @@ require_once("autoload.php");
 
 class Email
 	{
-    private $mailer;
+    public $mailer;
     
     public function __construct($host, $userName, $password, $name){
         
@@ -39,61 +39,7 @@ class Email
     }
     
     public function enviarEmail(){
-        //Validar se a mensagem foi ou nao enviada!
-        
-            if ($this->mailer->send()){
-                //se a mensagem foi enviada!
-                ?>
-                <script src="js/jquery.js"></script>
-                <script>
-                    //variaveis com elementos
-                    var mensagem = 'section.mensagem-ok';
-                    var mensagemContainer = 'section.mensagem-ok .container';
-                    
-                    //função para apresentar mensagem de resposta!
-                    $(function(){
-                        
-                        $(mensagemContainer).append('<p>Mensagem enviada! a</p>');    
-                            //mostrando mensagem na tela e desaparesendo.    
-                        
-                        $(mensagem).fadeIn(2000, function(){
-                            setInterval(function(){
-                                $(mensagem).fadeOut(2000);
-                            }, 4000)
-                        });
-                    })
-                    
-                </script>
-                <?php
-            }
-            else
-            {  
-                //se a nao mensagem foi enviada
-                ?>
-                <script src="js/jquery.js"></script>
-                <script>
-                    //variaveis com os elementos.
-                    var mensagem = 'section.mensagem-ok';
-                    var mensagemContainer = 'section.mensagem-ok .container';
-                    
-                    //função para aprensat a mensamgem de resposta!
-                    $(function(){
-                        //estilo da mensagem de erro.
-                        $(mensagem).css('background','#D3474A');
-                        
-                        $(mensagemContainer).append('<p>Mensagem não enviada! a</p>');
-                        //mostrando mensagem na tela e desaparesendo.
-                        
-                        //mostrando na tela e deseparesendo.
-                        $(mensagem).fadeIn(2000, function(){
-                            setInterval(function(){
-                                $(mensagem).fadeOut(2000);
-                            }, 4000)
-                        });
-                    })
-                </script>
-                <?php
-            } 
+        $this->mailer->send();
     }
 }
 ?>
