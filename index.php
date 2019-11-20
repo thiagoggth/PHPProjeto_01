@@ -1,7 +1,7 @@
 <?php
 include('config.php');
 include('paginas/RespostaEnvio.php');
-$url= isset($_GET['url']) ? $_GET['url'] : 'home';
+
 ?>
 <!--codigo html-->
 <!doctype html>

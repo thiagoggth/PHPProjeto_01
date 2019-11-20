@@ -1,8 +1,22 @@
 <?php
+session_start();
 include("vendor/Email.php");
+$url= isset($_GET['url']) ? $_GET['url'] : 'home';
+
 define ('INCLUDE_PATH','http://localhost/cursos/curso%20php/php%20jedai/projeto_01/novo/');
+define ('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
 
+//constantes do banco de dados.
+define ('HOST', 'localhost');
+define ('USER','root');
+define ('PASSWORD','');
+define ('DATABASE', 'projeto_01');
 
+$autoload = function($class){    
+    include('classes/'.$class.'.php');
+};
+
+spl_autoload_register($autoload);
 
 /*
 função para trocar de pagina dinamicamente.
@@ -12,7 +26,7 @@ sera incluido a home, se nao sera incluido
 a pagina solicidada depois do diretorio principal.
 caso nao exista sera incluido a pagina de erro 404.
 **/
-function includeDinamic($url){
+function includeDinamic($url){        
     if(file_exists('paginas/'.$url.'.php')){
         include('paginas/'.$url.'.php');
         }
