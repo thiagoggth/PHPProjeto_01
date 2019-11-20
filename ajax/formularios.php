@@ -17,16 +17,15 @@ if($_POST['email'] != ''){
         }else{
             $data['erro'] = true;
         }
-
         $data['resposta'] = 'sucesso';
 
-
-        /*//Enviando para mim mesmo novo email cadastrado.
-        $mailMensage->addAdress("thiagoggth30@gmail.com", "Thiago");
+        $meumailMensage= new Email("smtp.gmail.com", 'thiagoggth30@gmail.com', 'animesz16', 'Thiago');
+        //Enviando para mim mesmo novo email cadastrado.
+        $meumailMensage->addAdress("thiagoggth30@gmail.com", "Thiago");
         $info = array('subject'=>'Novo email cadastrado','body'=>"email: $email foi cadastrado!");
-        $mailMensage->formatarEmail($info);
-        //$mailMensage->enviarEmail();
-        */
+        $meumailMensage->formatarEmail($info);
+        $meumailMensage->enviarEmail();
+        
     }else{
         //email nao e vailido
         echo '<script>alert("email nao e valido")</script>';

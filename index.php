@@ -29,9 +29,11 @@ $url= isset($_GET['url']) ? $_GET['url'] : 'home';
     </head>
 
     <body>
-    <base base="<?php echo INCLUDE_PATH; ?>" />            
-        
-        
+    <base base="<?php echo INCLUDE_PATH; ?>" />       
+
+    <div class="overlay-loading">
+        <img src="<?= INCLUDE_PATH; ?>imagens/ajax-loader.gif">
+    </div><!--overlay-loading-->
         <header>
 
             <div class="topo">
