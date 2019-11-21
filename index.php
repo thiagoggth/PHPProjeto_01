@@ -8,7 +8,7 @@ include('paginas/RespostaEnvio.php');
     <html>
     <head>
         <meta charset="utf-8">
-        <link href="<?php echo INCLUDE_PATH;?>css/all.min.css" rel="stylesheet">        
+        <link href="<?php echo INCLUDE_PATH;?>css/all.min.css" rel="stylesheet">    
         <!--apagar deois-->
         <link href="css/style.css">
         <!---------------->
@@ -53,6 +53,7 @@ include('paginas/RespostaEnvio.php');
                             <li><a href="<?php echo INCLUDE_PATH;?>sobre">Sobre</a></li>
                             <li><a href="<?php echo INCLUDE_PATH;?>servicos">Serviços</a></li>
                             <li><a href="<?php echo INCLUDE_PATH;?>contato">Contato</a></li>
+                            <li><a href="<?php echo INCLUDE_PATH_PAINEL;?>">Area restrita</a></li>
                         </ul>
 
                     </nav><!--menu-desktop-->

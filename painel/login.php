@@ -39,9 +39,22 @@
             
             <input type="text" name="user" placehoader="login..." required>
             <input type="password" name="password" placehoader="senha..." required>
-            <input type="submit" name="acao" value="Login">
+            <table style="width: 100%; text-align: center;">
+                <td>
+                    <input type="submit" name="acao" value="Login">
+                </td>
+                <td>
+                    <a href="<?= INCLUDE_PATH?>">Voltar</a>
+                </td>
+            
+            
+
+            </table>
+            
 
         </form>
+
+        
     </div><!--box-login-->
 </body>
 </html>

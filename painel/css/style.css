@@ -8,7 +8,7 @@ html,body{
     height: 100%;
     background: rgb(225,225,225);
 }
-
+/*Pagina de login*/
 .box-login{
     max-width: 600px;
     width: 95%;
@@ -40,12 +40,58 @@ html,body{
 }
 
 .box-login input[type=submit]{
-    width: 120px;
-    height: 40px;
+    padding: 10px 60px;
     cursor: pointer;
     border: none;
     border-radius: 4px;
     background:#0ca360;
     color: white;
     font-size: 16px;    
+    
+}
+.box-login table td a{
+    padding: 10px 60px;
+    cursor: pointer;
+    text-decoration: none;   
+    border-radius: 4px;
+    background:saddlebrown;
+    color: white;
+    font-size: 16px;    
+    line-height: 40px;
+    margin-left: 50px;
+}
+/*Fim pagina de login*/
+
+/*Painel de controle*/
+
+.clear{
+    clear: both;
+}
+
+.center{
+    margin: 0 auto;
+    padding: 0 2%;    
+}
+
+.menu{
+    overflow-y: auto;
+    height: 100%;
+    background: #455a64;
+    float: left;
+    width: 300px;
+}
+
+header{
+    float: left;
+    padding: 10px;
+    background: #78909c;
+    width: calc(100% - 300px);    
+}
+
+.logout{
+    float: right;
+}
+.logout a{
+    color: white;
+    font-size: 24px;
 }
