@@ -55,6 +55,19 @@ function verificarFooter($pagina404){
     
 }
 
+/*funçoes*/
+
+function pegaCargo(int $cargo){
+    $arr = [
+        '0' => 'Normal',
+        '1' => 'Subadministrador',
+        '2' => 'Administrador'
+    ];
+
+    return $arr[$cargo];
+
+}
+
 
 
 ?>

@@ -76,22 +76,116 @@ html,body{
 .menu{
     overflow-y: auto;
     height: 100%;
-    background: #455a64;
-    float: left;
+    background: #455a64;    
     width: 300px;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.box-user{
+    text-align: center;
+}
+
+.avatar-user{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #2f3d42;
+    display: inline-block;    
+    text-align: left;
+}
+
+.avatar-user svg{
+    font-size: 50px;
+    color: #2f3d42;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.user-name{
+    text-align: center;
+    margin-top  : 10px;
+}
+.user-name p{
+    color: white;
+    font-size: 18px;
+    
 }
 
 header{
-    float: left;
+    position: relative;
+    left: 300px;    
     padding: 10px;
     background: #78909c;
     width: calc(100% - 300px);    
 }
 
+.menu-btn{
+    float:left;
+    cursor:pointer;
+    color:white;
+    font-size: 23px;
+}
+
 .logout{
-    float: right;
+    float: right;    
 }
 .logout a{
     color: white;
     font-size: 24px;
+    text-decoration: none;
 }
+
+/*conteudo principal do painel*/
+
+.content{
+    position: relative;
+    width: calc(100% - 300px);
+    left: 300px;
+    padding: 10px;        
+}
+
+.box-content{    
+    padding: 10px;    
+    margin-bottom: 10px;
+}
+
+.w100{
+    width: 100%;
+    background: red !important;
+}
+
+.w50{
+    width: 49%;    
+    background: red !important;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+
+@media screen and (max-width: 768px){
+    .menu{
+        display: none;
+    }
+
+    .content{
+        width: 100%;
+        left: 0;
+    }
+    header{
+        width: 100%;
+        left: 0;
+    }
+}
+
