@@ -77,15 +77,14 @@ html,body{
     overflow-y: auto;
     height: 100%;
     background: #455a64;    
-    width: 300px;
-    padding: 10px;
+    width: 300px;    
     position: fixed;
     left: 0;
     top: 0;
 }
 
 .box-user{
-    text-align: center;
+    text-align: center;    
 }
 
 .avatar-user{
@@ -107,14 +106,61 @@ html,body{
     -ms-transform: translate(-50%,-50%);
 }
 
+.user-img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #2f3d42;
+    display: inline-block;        
+    position: relative;
+}
+
+.user-img img{
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;    
+}
+
 .user-name{
     text-align: center;
     margin-top  : 10px;
 }
 .user-name p{
     color: white;
+    font-size: 18px;    
+}
+
+.menu-itens{
+    width: 100%;
+    margin-top: 10px;      
+}
+
+.menu-itens h2{
+    text-align: center;
     font-size: 18px;
-    
+    color: white;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    background-color:#252f33 ;    
+}
+
+.menu-itens a{  
+    color: white;
+    padding: 15px 0;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left:10px ;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #252f33;
+}
+
+.menu-itens a:hover{
+    background-color: #78909c;
 }
 
 header{
@@ -147,22 +193,32 @@ header{
     position: relative;
     width: calc(100% - 300px);
     left: 300px;
-    padding: 10px;        
+    padding: 10px;
 }
 
 .box-content{    
     padding: 10px;    
     margin-bottom: 10px;
+    background-color: white;
+}
+
+.box-content > h2{
+    color: #252f33;
+    padding-left: 8px;
+    font-size: 22px;
+    font-weight: none;
+    margin-bottom: 10px;
 }
 
 .w100{
-    width: 100%;
-    background: red !important;
+    width: 100%;    
 }
 
 .w50{
     width: 49%;    
-    background: red !important;
+}
+.w30{
+    width: 33.3%;    
 }
 
 .left{
@@ -173,8 +229,46 @@ header{
     float: right;
 }
 
+.wraper-info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.single-wraper{    
+    padding: 10px;
+    border: 5px solid white;
+}
+
+.single-wraper h2{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: none;
+
+}
+
+.red{       
+    background-color: red;    
+}
+
+.yellow{
+    background-color: #afaf49;
+}
+
+.green{
+    background-color: green;
+}
+
 
 @media screen and (max-width: 768px){
+    .w30{
+        width: 100%;
+    }
+    .box-content > h2{
+        text-align: center;
+    }
+
     .menu{
         display: none;
     }

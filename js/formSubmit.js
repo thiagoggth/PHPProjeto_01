@@ -11,7 +11,7 @@ $(function(){
             dataType:'json',
             data:form.serialize()           
         }).done(function(data){
-            if(data.sucesso){
+            if(data.resposta){
                 $('.overlay-loading').fadeOut();
                 $('form input[type=email]').prop('value', '');
                 showEmailMessageCuston(false);

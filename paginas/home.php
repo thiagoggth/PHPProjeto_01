@@ -8,7 +8,7 @@
     <form method="post">
       <input type="email" name="email" placeholder="E-mail..." required>
       <br>
-      <input type="submit" value="Cadastar!" name="acao">
+      <input type="submit" value="Cadastar!" name="acao">      
     </form>
   </div>
   <!--container--> 

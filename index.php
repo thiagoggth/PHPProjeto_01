@@ -1,7 +1,9 @@
 <?php
-include('config.php');
-include('paginas/RespostaEnvio.php');
-
+    include('config.php');  
+    include('paginas/RespostaEnvio.php');
+?>
+<?php
+    Site::updateUsuarioOnline();
 ?>
 <!--codigo html-->
 <!doctype html>

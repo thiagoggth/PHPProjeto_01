@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set('America/Campo_Grande');
 include("vendor/Email.php");
 $url= isset($_GET['url']) ? $_GET['url'] : 'home';
 
@@ -54,6 +55,9 @@ function verificarFooter($pagina404){
         echo ' class="fixed"';
     
 }
+
+/*constantes*/
+define('NOME_EMPRESA','Empresa Ficticia');
 
 /*funçoes*/
 
