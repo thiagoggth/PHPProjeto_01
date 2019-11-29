@@ -237,15 +237,20 @@ header{
 
 .single-wraper{    
     padding: 10px;
-    border: 5px solid white;
+    border: 5px solid white;    
 }
 
 .single-wraper h2{
     color: white;
     font-size: 22px;
     margin-bottom: 10px;
-    font-weight: none;
+    font-weight: bold;
+}
 
+.single-wraper p{
+    position: relative;    
+    color: white;
+    font-size: 42px;
 }
 
 .red{       

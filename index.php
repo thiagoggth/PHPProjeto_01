@@ -4,6 +4,7 @@
 ?>
 <?php
     Site::updateUsuarioOnline();
+    Site::contador();
 ?>
 <!--codigo html-->
 <!doctype html>

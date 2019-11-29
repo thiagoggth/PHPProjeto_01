@@ -34,6 +34,23 @@ class Painel
         $date = date('y-m-d H:i:s');
         $sql = MySql::conectar()->exec("delete from `tb_admin.online` where ultima_acao <'$date' - INTERVAL 1 MINUTE");
     }
+
+    public static function pegarVisitasTotais(){
+        $sql = MySql::conectar()->prepare("select * from `tb_admin.visitas`");
+        $sql->execute();
+        $total = $sql->rowCount();
+        $totalhoje = self::pegarVisitasHoje();
+
+        return array("visitasTotal" => $total, "visitasHoje" => $totalhoje);
+
+    }
+    
+    public static function pegarVisitasHoje(){
+        $sql = MySql::conectar()->prepare("select * from `tb_admin.visitas` where dia = ?");
+        $sql->execute(array(date('y-m-d')));
+        $total = $sql->rowCount();
+        return $total;
+    }
     
 }
 

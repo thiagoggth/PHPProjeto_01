@@ -33,6 +33,16 @@
             
         }
 
-        
+        public static function contador(){
+            
+            if(!isset($_COOKIE['visita'])){
+                setcookie('visita','true',time() + (60*60*24*7));
+                $dia = date('y-m-d');
+                $ip = $_SERVER['REMOTE_ADDR'];
+                $sql = MySql::conectar()->prepare("insert into `tb_admin.visitas` values(null, ?,?)");
+                $sql->execute(array($ip, $dia));
+                
+            }
+        }
         
     }

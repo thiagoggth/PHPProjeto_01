@@ -1,5 +1,6 @@
 <?php
     $usuariosOnline = Painel::listarUsuariosOnline();
+    $totalVisitas = Painel::pegarVisitasTotais();
 ?>
 <div class="box-content">
 
@@ -18,11 +19,12 @@
         
         <div class="w30 single-wraper bg-danger">
             <h2>Total de visitas</h2>
+            <p><?=$totalVisitas['visitasTotal']?></p>
         </div>
 
         <div class="w30 single-wraper bg-success">
             <h2>Visitas hoje</h2>
-            <p>Ut cupidatat exercitation officia ex id. Laboris aliquip incididunt qui proident commodo. Duis aliqua excepteur eiusmod commodo. Minim do laboris reprehenderit pariatur labore officia occaecat exercitation irure pariatur. Ullamco esse aute magna anim nostrud.</p>
+            <p><?=$totalVisitas['visitasHoje']?></p>
         </div>
 
     </div><!--whraper-info-->
@@ -33,24 +35,36 @@
 
     <h2><i class="fas fa-users"></i> Usuarios online</h2>
 
-    <table class="table text-center">
+    <div class ="table-responsive">
 
-        <thead>
-            <th>IP</th>
-            <th>Ultima ação</th>            
-        </thead>
-        
-        <tbody>
-            <?php
-                foreach($usuariosOnline as $key => $value){
-            ?>
-            <tr>
-                <td><?= $value['ip'] ?></td>
-                <td><?= date('d/m/y H:m:s', strtotime($value['ultima_acao'])) ?></td>
-            </tr>          
+        <table class="table text-center table-striped table-dark">
+
+            <thead>
+                <tr>
+                    <th class="w50">IP</th>
+                    <th class="w50">Ultima ação</th>            
+                </tr>
+                
+            </thead>
             
-            <?php } ?>
-        </tbody>        
-    </table><!--table-responsive-->
+            <tbody>
+                <?php
+                    $users = count($usuariosOnline);                
+                    if($users != 0){                
+                        foreach($usuariosOnline as $key => $value){
+                ?>
+                <tr>
+                    <td><?= $value['ip'] ?></td>
+                    <td><?= date('d/m/y H:m:s', strtotime($value['ultima_acao'])) ?></td>
+                </tr>          
+                
+                <?php } }else{ ?>
+                    <tr>                
+                        <td class="" colspan="2"><p>Nenhum usuario online!</p></td>
+                    </tr>
+                <?php } ?>
+            </tbody>        
+        </table><!--table-responsive-->
+    </div>
 
 </div><!--box-content-->
