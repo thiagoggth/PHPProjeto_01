@@ -1,6 +1,7 @@
 <?php
     $usuariosOnline = Painel::listarUsuariosOnline();
     $totalVisitas = Painel::pegarVisitasTotais();
+    
 ?>
 <div class="box-content">
 

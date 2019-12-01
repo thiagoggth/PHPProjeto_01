@@ -6,5 +6,4 @@ if(Painel::logado() == false){
 }else{
     include('main.php');
 }
-
 ?>

@@ -11,15 +11,22 @@ $(function(){
             dataType:'json',
             data:form.serialize()           
         }).done(function(data){
-            if(data.resposta){
+            if(data.repitEmail){                
                 $('.overlay-loading').fadeOut();
                 $('form input[type=email]').prop('value', '');
-                showEmailMessageCuston(false);
+                showEmailMessageEmailRepit();                
             }else{
-                $('.overlay-loading').fadeOut();
-                showEmailMessageCuston(true);
+                if(data.resposta){                    
+                    $('.overlay-loading').fadeOut();
+                    $('form input[type=email]').prop('value', '');
+                    showEmailMessageCuston(false);
+                }else{
+                    $('.overlay-loading').fadeOut();
+                    showEmailMessageCuston(true);
+                }
             }
-        });           
+            
+        });
         return false;
     });
     

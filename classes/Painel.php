@@ -51,6 +51,12 @@ class Painel
         $total = $sql->rowCount();
         return $total;
     }
+
+    public static function listaEmails(){
+        $sql = MySql::conectar()->prepare("select * from `tb_admin.listaemails`");
+        $sql->execute();
+        return $sql->fetchAll();
+    }
     
 }
 

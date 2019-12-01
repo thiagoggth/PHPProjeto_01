@@ -49,42 +49,77 @@ function showEmailMessageCuston(validator) {
     //Funcao de mensagens para a criação de estado.
 
     if (validator == false) {
-        //variaveis com os elementos.
-        var mensagem = 'section.mensagem-ok';
-        var mensagemContainer = 'section.mensagem-ok .container';
+        //variaveis com os elementos.  
+        
+        var mensageOk = '.mensagem-ok';
+        var mensagemTotal = '<div class ="mensagem-ok bg-success"><p>Email cadastrado com sucesso!</p></div>';
         
         //função para aprensat a mensamgem de resposta!
         $(function(){
-            $(mensagemContainer).append('<p>Email Cadastrado com sucesso! a</p>');
+            var timer = 4000;
             //mostrando mensagem na tela e desaparesendo.
             
+            $('body').append(mensagemTotal);
+            
             //mostrando na tela e deseparesendo.
-            $(mensagem).fadeIn(2000, function(){
-                setInterval(function(){
-                    $(mensagem).fadeOut(2000);
-                }, 4000)
+            $(mensageOk).fadeIn(2000);
+
+            $(mensageOk).delay(timer);
+
+            $(mensageOk).fadeOut(2000, function(){
+                $(this).remove();
             });
+            
         });
     } else {
-        //variaveis com os elementos.
-        var mensagem = 'section.mensagem-ok';
-        var mensagemContainer = 'section.mensagem-ok .container';
+        //variaveis com os elementos.  
+        
+        var mensageOk = '.mensagem-ok';
+        var mensagemTotal = '<div class ="mensagem-ok bg-danger"><p>Erro ao enviar email</p></div>';
         
         //função para aprensat a mensamgem de resposta!
         $(function(){
-            //estilo da mensagem de erro.
-            $(mensagem).css('background','#D3474A');
-            
-            $(mensagemContainer).append('<p>Erro ao cadastrar email! a</p>');
+            var timer = 4000;
             //mostrando mensagem na tela e desaparesendo.
             
+            $('body').append(mensagemTotal);
+            
             //mostrando na tela e deseparesendo.
-            $(mensagem).fadeIn(2000, function(){
-                setInterval(function(){
-                    $(mensagem).fadeOut(2000);
-                }, 4000)
+            $(mensageOk).fadeIn(2000);
+
+            $(mensageOk).delay(timer);
+
+            $(mensageOk).fadeOut(2000, function(){
+                $(this).remove();
             });
+            
         });
 
     }
+}
+
+function showEmailMessageEmailRepit(){
+    //variaveis com os elementos.  
+    
+    var mensageOk = '.mensagem-ok';
+    var mensagemTotal = '<div class ="mensagem-ok bg-danger"><p>Este email ja esta cadastrado!</p></div>';
+    
+    //função para aprensat a mensamgem de resposta!
+    $(function(){
+        var timer = 4000;
+        //mostrando mensagem na tela e desaparesendo.
+        
+        $('body').append(mensagemTotal);
+        
+        //mostrando na tela e deseparesendo.
+        $(mensageOk).fadeIn(2000);
+
+        $(mensageOk).delay(timer);
+
+        $(mensageOk).fadeOut(2000, function(){
+            $(this).remove();
+        });
+
+        
+    });
 }
