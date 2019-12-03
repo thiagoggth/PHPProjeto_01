@@ -20,8 +20,7 @@ class Painel
         
     }
 
-    public static function listarUsuariosOnline(){
-        
+    public static function listarUsuariosOnline(){        
         
         self::limparUsuariosOnline();
         $sql = MySql::conectar()->prepare("select * from `tb_admin.online`");
@@ -39,9 +38,10 @@ class Painel
         $sql = MySql::conectar()->prepare("select * from `tb_admin.visitas`");
         $sql->execute();
         $total = $sql->rowCount();
+        $valores=$sql->fetchAll();
         $totalhoje = self::pegarVisitasHoje();
 
-        return array("visitasTotal" => $total, "visitasHoje" => $totalhoje);
+        return array("visitasTotal" => $total, "visitasHoje" => $totalhoje, "registrosVisitas" => $valores);
 
     }
     

@@ -34,7 +34,7 @@
                 <div class="user-name">
                     <p><?=$_SESSION['nome'];?></p>
                     <p><?=pegaCargo($_SESSION['cargo'])?></p>
-                </div><!--user name-->
+                </div><!--user name-->               
 
             </div><!--box-user-->
 
@@ -64,6 +64,10 @@
 
             </div><!--menu-itens-->
 
+            <div class="menu-btn">
+                    <i class="fa fa-times"></i>
+                </div><!--menu-btn-->
+
         </div><!--menu-->
         
         <header>
@@ -87,7 +91,7 @@
 
         <!--conteudo do painel-->
 
-        <div class="content">           
+        <div class="content center">           
 
             <?php                
                 Painel::carregarPagina($url);

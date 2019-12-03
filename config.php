@@ -4,7 +4,7 @@ date_default_timezone_set('America/Campo_Grande');
 include("vendor/Email.php");
 $url= isset($_GET['url']) ? $_GET['url'] : 'home';
 
-/*mudar para localhost*/define ('INCLUDE_PATH','http://192.168.15.7/cursos/curso%20php/php%20jedai/projeto_01/novo/');
+/*mudar para localhost*/define ('INCLUDE_PATH','http://localhost/cursos/curso%20php/php%20jedai/projeto_01/novo/');
 define ('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
 
 //constantes do banco de dados.

@@ -69,3 +69,41 @@
     </div>
 
 </div><!--box-content-->
+
+<div class="box-content w100">
+
+    <h2><i class="fas fa-users"></i> Lista de visitantes</h2>
+
+    <div class ="table-responsive">
+
+        <table class="table text-center table-striped table-dark">
+
+            <thead>
+                <tr>
+                    <th class="w50">IP</th>
+                    <th class="w50">Data</th>            
+                </tr>
+                
+            </thead>
+            
+            <tbody>
+                <?php
+                    $visitas = $totalVisitas['visitasTotal'];
+                    if($visitas != 0){                        
+                        foreach($totalVisitas['registrosVisitas'] as $key => $value){
+                ?>
+                <tr>
+                    <td><?= $value['ip'] ?></td>
+                    <td><?= date('d/m/y H:m:s', strtotime($value['dia'])) ?></td>
+                </tr>          
+                
+                <?php } }else{ ?>
+                    <tr>                
+                        <td class="" colspan="2"><p>Nenhuma visita!</p></td>
+                    </tr>
+                <?php } ?>
+            </tbody>        
+        </table><!--table-responsive-->
+    </div>
+
+</div><!--box-content-->
