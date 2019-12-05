@@ -28,6 +28,7 @@
 ?>
 
 
+
 <html>
 <head>
     <title>Tela de login</title>
@@ -36,6 +37,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">              
     <link href="<?=INCLUDE_PATH_PAINEL;?>css/all.min.css" rel="stylesheet">
     <link href="<?php echo INCLUDE_PATH_PAINEL;?>css/style.css" rel="stylesheet">
+    <style>
+            body{
+                background: rgb(82, 86, 101);
+            }
+    </style>
 </head>
 <body>
     <div class ="box-login">

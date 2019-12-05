@@ -7,7 +7,7 @@
 
     <div class ="table-responsive">
 
-        <table class="table text-center table-striped table-dark">
+        <table class="table text-center table-dark">
 
             <thead>
                 <tr>
@@ -25,7 +25,7 @@
                 ?>
                 <tr id="delete_<?=$value['id']?>">
                     <td><?= $value['email'] ?></td>
-                    <td><button class="btn btn-danger" onclick="deleteEmail(<?=$value['id']?>)">Deletar</button></td>
+                    <td><button class="btn btn-danger" onclick="deleteEmail(<?=$value['id']?>)"><i class="far fa-trash-alt"></i></button></td>
                 </tr>          
                 
                 <?php } }else{ ?>

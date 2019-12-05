@@ -76,7 +76,7 @@
 
     <div class ="table-responsive">
 
-        <table class="table text-center table-striped table-dark">
+        <table class="table text-center  table-dark">
 
             <thead>
                 <tr>
