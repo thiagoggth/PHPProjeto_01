@@ -1,3 +1,1 @@
-Coisas que eu estou escrevendo para teste
-
-outras alretaçoes parte dois
+UM site simples usando PHP para disparo de envio de email e presistencia no banco de dados mysql.
